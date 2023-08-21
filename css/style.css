@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    
+}
+
+:root{
+    --mainColor: #01B3A7;
+    --secondColor: #162E44;
+    --bgColor: #F7F7F7;
+    --transition: all 0.3s ease-in-out;
+}
+a{
+    text-decoration: none;
+}
+section{
+    padding: 5% 0;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background: #ddd;
+    margin-bottom: 15px;
+    position: relative;
+}
+.click a{
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    padding: 0.75rem;
+    display: block;
+    width: 30%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    transition: var(--transition);
+}
+.click a:hover{
+    background-color: var(--mainColor) !important;
+    opacity: 0.7;
+}
+/* ============ befor starting page ========== */
+#loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: var(--mainColor);
+    z-index: 9999999;
+}
+.spinner {
+    width: 80px;
+    height: 80px;
+    background-color: #fff; 
+    margin: 100px auto;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+  }
+  @keyframes sk-rotateplane {
+    0% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    } 50% { 
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    } 100% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+  }
+
+.toScroll i {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    background: var(--mainColor);
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+.toScroll i:hover {
+    opacity: 0.7;
+}
+/* ===================================== */
+/* start header */
+header{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.topBar .opiningInfo p{
+    margin-bottom: 0 !important;
+    font-size: 18px;
+}
+.topBar .opiningInfo i{
+    color: var(--mainColor);
+}
+
+.navbar{
+    background-color: var(--secondColor);
+    padding: 0 !important;
+}
+.navbar-nav{
+    --bs-nav-link-padding-y: 1rem;
+}
+.navbar-nav li a{
+    color: #fff;
+    margin: 0 5px;
+}
+.navbar-nav li a.active{
+    background: rgba(255, 255, 255, 0.11) !important;
+    color:#fff !important;
+}
+.navbar-nav li a:hover{
+    background: rgba(255, 255, 255, 0.11);
+    color:#fff
+}
+.social-icon i{
+    margin-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.social-icon i:hover{
+    color: var(--mainColor);
+}
+.navbar-toggler-icon{
+    background-image: url(../img/bar.png);
+}
+.navbar-toggler {
+    border-color: #fff !important;
+}
+
+.header-title{
+    height: 80vh;
+}
+.header-title p{
+    font-size: 20px;
+}
+.header-title h1{
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+.header-title .click a{
+    background-color: transparent;
+    border-color: #fff;
+}
+/*   =========== under header =========   */
+.other-tours{
+    background-color: var(--bgColor);
+}
+.other-tours .item img{
+    transition: var(--transition);
+}
+.other-tours .item:hover img{
+    transform: scale(1.1);
+}
+.other-tours .click a:hover{
+    background-color: transparent !important;
+    color: #000;
+}
+/* ====================================================== */
+/* start discover */
+.dicover-content ul li{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.tabs-list .active{
+    color: var(--mainColor);
+}
+.dicover-content ul li:hover{
+    color: var(--mainColor);
+}
+.tabs-content > div:not(:first-child){
+    display: none;
+}
+.dicover-content .click a:last-child{
+    background-color: transparent;
+    color: #000;
+}
+/* end discover */
+/* =================================================================== */
+/* start service */
+#service{
+    background-color: var(--bgColor);
+}
+.service-content i{
+    color: var(--mainColor);
+}
+/* ================================= */
+/* start hot tour */
+.tour-content .content i{
+    color: gold;
+}
+.tour-content .price{
+    padding: 20px;
+    background: var(--mainColor);
+    height: fit-content;
+    color: #fff;
+    border-bottom-left-radius: 1.5rem;
+}
+.tour-content .content .click a{
+    background-color: transparent;
+    color: #000;
+    margin-left: auto;
+}
+/* ======================== */
+/* start team */
+#team{
+    background-color: var(--bgColor);
+}
+.member h6{
+    color: var(--mainColor);
+}
+.member:hover{
+    top:-10px
+}
+/* =========================== */
+/* start book tour */
+#bookTour{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/book-tour.jpg);
+}
+/* end book tour */
+/* ================================== */
+/* start gallery */
+.vbox-container {
+    overflow-y: hidden;
+}
+.vbox-child{
+    width: 60% !important;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 10px;
+}
+.owl-dots .owl-dot{
+    background-color: var(--secondColor) !important;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.owl-dots .owl-dot.active{
+    background-color: var(--mainColor) !important;
+}
+/* end gallery */
+/* ==================================== */
+/* start footer */
+footer{
+    background-color: var(--secondColor);
+    padding: 2% 0;
+}
+.footer-content .links p{
+    margin-bottom: 0.5rem !important;
+}
+.footer-content .links p a{
+    color: #fff;
+}
+.footer-content .links p a:hover{
+    color: var(--mainColor);
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .topBar .opiningInfo p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .topBar .logo{
+        margin-bottom: 10px;
+    }
+    .topBar .logo h3{
+        text-align: center;
+    }
+    .header-title h1{
+        font-size: 3em;
+    }
+    .tour-content{
+        flex-direction: column;
+    }
+    .tour-content img{
+        width: 100% !important;
+    }
+    .tour-content .price{
+        width: 20%;
+        margin-left: auto;
+    }
+
+}
